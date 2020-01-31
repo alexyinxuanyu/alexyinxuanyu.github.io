@@ -5,14 +5,19 @@
   
 
   
-  <title>Welcome to Alex Space</title>
+  <title>leetcode128 | Welcome to Alex Space</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Welcome to Alex Space">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="#128. 最长连续序列 因为需要O(n)复杂度，所以每一个去暴力是不可以的。但是只有hashset不减枝也过不去。所以需要剪枝，只对number-1不在hashset里的数字进行操作这样就能删掉很多，从而近似O(n)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="leetcode128">
+<meta property="og:url" content="http://yoursite.com/2020/01/31/leetcode128/index.html">
 <meta property="og:site_name" content="Welcome to Alex Space">
+<meta property="og:description" content="#128. 最长连续序列 因为需要O(n)复杂度，所以每一个去暴力是不可以的。但是只有hashset不减枝也过不去。所以需要剪枝，只对number-1不在hashset里的数字进行操作这样就能删掉很多，从而近似O(n)">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-31T11:09:26.000Z">
+<meta property="article:modified_time" content="2020-01-31T11:17:59.946Z">
 <meta property="article:author" content="Alex Yin">
+<meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Welcome to Alex Space" type="application/atom+xml">
@@ -66,9 +71,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-leetcode128" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-leetcode128" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/01/31/leetcode128/" class="article-date">
   <time datetime="2020-01-31T11:09:26.000Z" itemprop="datePublished">2020-01-31</time>
@@ -85,8 +88,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/31/leetcode128/">leetcode128</a>
+    <h1 class="article-title" itemprop="name">
+      leetcode128
     </h1>
   
 
@@ -96,11 +99,10 @@
       
         <p>#128. 最长连续序列</p>
 <p>因为需要O(n)复杂度，所以每一个去暴力是不可以的。但是只有hashset不减枝也过不去。<br>所以需要剪枝，只对number-1不在hashset里的数字进行操作这样就能删掉很多，从而近似O(n)</p>
-        
-          <p class="article-more-link">
-            <a href="/2020/01/31/leetcode128/#more">Read More</a>
-          </p>
-        
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Solution(object):</span><br><span class="line">    def longestConsecutive(self, nums):</span><br><span class="line">        <span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        "</span><span class="string">""</span></span><br><span class="line">        numset=<span class="built_in">set</span>(nums)</span><br><span class="line">        <span class="keyword">if</span> len(nums)&gt;0:</span><br><span class="line">            maxlenth=1</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            maxlenth=0</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">            <span class="keyword">if</span> i-1 not <span class="keyword">in</span> nums:</span><br><span class="line">                streak=1</span><br><span class="line">                nownum=i+1</span><br><span class="line">                <span class="keyword">while</span> nownum <span class="keyword">in</span> nums:</span><br><span class="line">                    streak+=1</span><br><span class="line">                    nownum+=1</span><br><span class="line">                maxlenth=max(streak,maxlenth)</span><br><span class="line">        <span class="built_in">return</span> maxlenth</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     <footer class="article-footer">
@@ -112,107 +114,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-MyFirstDiary" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/31/MyFirstDiary/" class="article-date">
-  <time datetime="2020-01-31T08:42:07.000Z" itemprop="datePublished">2020-01-31</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Blog/">Blog</a>►<a class="article-category-link" href="/categories/Blog/leetcode/">leetcode</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/31/MyFirstDiary/">Leetcode388</a>
-    </h1>
+    <a href="/2020/01/31/MyFirstDiary/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Leetcode388</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>摘要部分<br>388. 文件的最长绝对路径</p>
-        
-          <p class="article-more-link">
-            <a href="/2020/01/31/MyFirstDiary/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/31/MyFirstDiary/" data-id="ck61x80mj0000ywqr8r2h6ab1" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/31/hello-world/" class="article-date">
-  <time datetime="2020-01-31T08:29:12.625Z" itemprop="datePublished">2020-01-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/31/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/31/hello-world/" data-id="ck61x1srp0000spqr6if47gab" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
