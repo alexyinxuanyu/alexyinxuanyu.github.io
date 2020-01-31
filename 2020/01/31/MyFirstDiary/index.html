@@ -15,7 +15,7 @@
 <meta property="og:description" content="摘要部分388. 文件的最长绝对路径">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-01-31T08:42:07.000Z">
-<meta property="article:modified_time" content="2020-01-31T08:55:03.491Z">
+<meta property="article:modified_time" content="2020-01-31T08:57:10.470Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
@@ -98,7 +98,7 @@
 
 <p>#388. 文件的最长绝对路径</p>
 <p>仔细阅读说明，审题很重要，文件名至少存在一个就说明这是非常重要的。而且返回的是文件的最长目录，所以maxlenth的更新一定是在文件出现的时候<br>题目中说到目录名中一定不存在.也是一个提示，应该很敏感的感受到这是关于栈的更新的。dfs需要回溯说明不符合题目中o(n)复杂度的要求。</p>
-<p>class Solution:<br>    def lengthLongestPath(self, input):<br>        stack=[[-1,0]]<br>        maxlenth=0<br>        for i in input.split(‘\n’):<br>            depth=i.count(‘\t’)<br>            this=i.replace(‘\t’,’’)<br>            while stack and depth&lt;=stack[-1][0]:<br>                stack.pop()<br>            if ‘.’ in i:<br>                maxlenth=max(maxlenth,len(this)+stack[-1][1])<br>            else:<br>                stack.append([depth,stack[-1][1]+len(this)+1])<br>        return maxlenth</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def lengthLongestPath(self, input):</span><br><span class="line">        stack=[[-1,0]]</span><br><span class="line">        maxlenth=0</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> input.split(<span class="string">'\n'</span>):</span><br><span class="line">            depth=i.count(<span class="string">'\t'</span>)</span><br><span class="line">            this=i.replace(<span class="string">'\t'</span>,<span class="string">''</span>)</span><br><span class="line">            <span class="keyword">while</span> stack and depth&lt;=stack[-1][0]:</span><br><span class="line">                stack.pop()</span><br><span class="line">            <span class="keyword">if</span> <span class="string">'.'</span> <span class="keyword">in</span> i:</span><br><span class="line">                maxlenth=max(maxlenth,len(this)+stack[-1][1])</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                stack.append([depth,stack[-1][1]+len(this)+1])</span><br><span class="line">        <span class="built_in">return</span> maxlenth</span><br></pre></td></tr></table></figure>
 
       
     </div>
