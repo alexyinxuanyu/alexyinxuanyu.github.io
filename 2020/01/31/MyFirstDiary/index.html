@@ -7,17 +7,17 @@
   
   <title>MyFirstDiary | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="摘要部分">
+  <meta name="description" content="摘要部分388. 文件的最长绝对路径">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MyFirstDiary">
 <meta property="og:url" content="http://yoursite.com/2020/01/31/MyFirstDiary/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="摘要部分">
+<meta property="og:description" content="摘要部分388. 文件的最长绝对路径">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-01-31T08:42:07.000Z">
-<meta property="article:modified_time" content="2020-01-31T08:43:56.072Z">
+<meta property="article:modified_time" content="2020-01-31T08:51:58.353Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="hello">
+<meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -74,7 +74,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%97%A5%E5%BF%97/">日志</a>►<a class="article-category-link" href="/categories/%E6%97%A5%E5%BF%97/%E4%BA%8C%E7%BA%A7%E7%9B%AE%E5%BD%95/">二级目录</a>
+    <a class="article-category-link" href="/categories/%E6%97%A5%E5%BF%97/">日志</a>►<a class="article-category-link" href="/categories/%E6%97%A5%E5%BF%97/leetcode/">leetcode</a>
   </div>
 
   </div>
@@ -93,10 +93,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>摘要部分</p>
+        <p>摘要部分<br>388. 文件的最长绝对路径</p>
 <a id="more"></a>
 
-<p>正文部分</p>
+<p>#388. 文件的最长绝对路径</p>
+<p>仔细阅读说明，审题很重要，文件名至少存在一个就说明这是非常重要的。而且返回的是文件的最长目录，所以maxlenth的更新一定是在文件出现的时候<br>题目中说到目录名中一定不存在.也是一个提示，应该很敏感的感受到这是关于栈的更新的。dfs需要回溯说明不符合题目中o(n)复杂度的要求。</p>
+<p>class Solution:<br>    def lengthLongestPath(self, input):<br>        stack=[[-1,0]]<br>        maxlenth=0<br>        for i in input.split(‘\n’):<br>            depth=i.count(‘\t’)<br>            this=i.replace(‘\t’,’’)<br>            while stack and depth&lt;=stack[-1][0]:<br>                stack.pop()<br>            if ‘.’ in i:<br>                maxlenth=max(maxlenth,len(this)+stack[-1][1])<br>            else:<br>                stack.append([depth,stack[-1][1]+len(this)+1])<br>        return maxlenth</p>
 
       
     </div>
@@ -104,7 +106,7 @@
       <a data-url="http://yoursite.com/2020/01/31/MyFirstDiary/" data-id="ck61x80mj0000ywqr8r2h6ab1" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/" rel="tag">hello</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li></ul>
 
     </footer>
   </div>
@@ -131,7 +133,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E5%BF%97/">日志</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E5%BF%97/%E4%BA%8C%E7%BA%A7%E7%9B%AE%E5%BD%95/">二级目录</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E5%BF%97/">日志</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E5%BF%97/leetcode/">leetcode</a></li></ul></li></ul>
     </div>
   </div>
 
@@ -141,7 +143,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello/" rel="tag">hello</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li></ul>
     </div>
   </div>
 
@@ -151,7 +153,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hello/" style="font-size: 10px;">hello</a>
+      <a href="/tags/leetcode/" style="font-size: 10px;">leetcode</a>
     </div>
   </div>
 
