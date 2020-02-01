@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>《第一本无人驾驶技术书》 | Welcome to Alex Space</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第一章 无人车：正在开始的未来个人书本建议：1.书籍中没有太多关于检测，分割，融合的算法，所以算法方面还是看2019年底英文的那一本新书。2.这本书可以当综述看看，把握AD整体，并不适合专项技术的研究。1.3.对自己来说，可以从感知以外的领域去了解各个模块，比如PNC，比如仿真，比如地图，比如系统。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《第一本无人驾驶技术书》">
+<meta property="og:url" content="http://yoursite.com/2020/02/01/AD-1/index.html">
+<meta property="og:site_name" content="Welcome to Alex Space">
+<meta property="og:description" content="第一章 无人车：正在开始的未来个人书本建议：1.书籍中没有太多关于检测，分割，融合的算法，所以算法方面还是看2019年底英文的那一本新书。2.这本书可以当综述看看，把握AD整体，并不适合专项技术的研究。1.3.对自己来说，可以从感知以外的领域去了解各个模块，比如PNC，比如仿真，比如地图，比如系统。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-01T09:10:55.000Z">
+<meta property="article:modified_time" content="2020-02-01T09:17:28.407Z">
+<meta property="article:author" content="Alex Yin">
+<meta property="article:tag" content="《第一本无人驾驶技术书》">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Welcome to Alex Space" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Welcome to Alex Space</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">somewhere to write and record something</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-AD-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/01/AD-1/" class="article-date">
+  <time datetime="2020-02-01T09:10:55.000Z" itemprop="datePublished">2020-02-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/blog/">blog</a>►<a class="article-category-link" href="/categories/blog/Autopilot/">Autopilot</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《第一本无人驾驶技术书》
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第一章 无人车：正在开始的未来<br>个人书本建议：<br>1.书籍中没有太多关于检测，分割，融合的算法，所以算法方面还是看2019年底英文的那一本新书。<br>2.这本书可以当综述看看，把握AD整体，并不适合专项技术的研究。<br>1.3.对自己来说，可以从感知以外的领域去了解各个模块，比如PNC，比如仿真，比如地图，比如系统。</p>
+<a id="more"></a>
+
+<p>无人车：正在开始的未来：<br>无人车的优势<br>A.死亡人数，尤其是高速死亡人数全球每年在124万，这些都是劳动力的丧失与经济损失。<br>B.死亡往往和疲劳驾驶和酒后驾驶有关<br>C.死亡类别基本都围绕在，car，bigcar，pedestrian，cyclist之间的互相碰撞。<br>D.当安装自动安装装置的时候，会让高速公路的死亡数量降低31%，设备基本包括碰撞警告检测，碰撞制动，车道偏离警告和盲点监测，其实也就是增强人的感知能力，看到人眼看不到的东西，然后进行pnc方面的联动还有系统方面的提醒。<br>E.缓解交通拥堵, 交通拥堵也会造成竞技的损失每年均成本会不停地增加， 我觉得车流量检测可以一部分缓解红绿灯动态分配时间的问题，但是由于无法和智能车一样实时交互，所以我觉得还是车载感应器和智能交通系统联合工作比较靠谱。<br>F.以前我觉得是伪需求的自动泊车也不太一样了，因为我以前没有考虑到车停车和人停车的区别，无人车停车大概能给每侧人为预留的空间减少10厘米，每个停车位大概就能减少1.95平方米，层高也可以按照车身进行设计，如果无人车与传统汽车进行混用，大概减少26%，如果直接给自动泊车使用，大概减少62%。<br>G.提高燃油利用率，大概提升4-10%，当然啦，自然而然就一下子减少了很多衍生垃圾，比如空气污染。</p>
+<p>2.自动驾驶分级<br>自然是L0-L4<br>L0：屁都没有<br>L1：单一功能，各种辅助。<br>L2：部分自动化，需要短时间准备随时接管，就是硅谷钢铁侠公司提出的autopilot<br>L3：恭喜！来到有限情况下自动驾驶的世界，除了紧急情况不需要接管。<br>L4：完全自动驾驶！！！！</p>
+<p>ADAS大属于0-2<br>L3基本就可以了，除了一些奇怪的情况，火山喷发，地震？！<br>无人驾驶和自动驾驶不同，无人驾驶是自动化驾驶的最高形态。</p>
+<p>个人想法：全自动自动驾驶应该比目前的半自动驾驶更加安全，半自动驾驶时候，驾驶者/安全员接管车的时间会比系统发出警报的时间远远要长，基本上需要17秒。而人为反应刹车提示也远大于系统自己的判断(1.2&gt;0.2秒)，而在一个75英里/h的速度下，差距会相差37码，所以我觉得自动驾驶的安全方面也会想一个寒冬一样，熬到全自动的时代(L3+)，会有一个质的飞跃。</p>
+<p>3.无人驾驶系统简介。<br>无人驾驶系统是一个复杂的系统。主要有三个方面完成：算法，client，云端。算法就是感知，地图分析，决策，路径规划，路径预测等等。client就是综合这些的一个系统，主要包括机器人操作平台以及硬件平台。云端就是包括数据存储，模拟，高精度地图的绘制以及深度学习模型的训练。</p>
+<p>主要步骤就是，算法对行车过程中传感器原始数据中提取有意义的信息以了解周遭的环境情况，并根据环境做出决策。client端融合多种算法来满足实时性和可靠性也就是对车子整体的操作。云平台就是为无人车提供离线计算以及存储功能，通过云平台，我们就可以测试新的算法，更新高精度地图并训练并训练更加有效地识别，追踪和决策模型。</p>
+<p>算法由，传感器传感，感知，定位，决策组成。</p>
+<p>传感器一般有多种，有效的融合之后能互补大家的劣势。一般由GPS/IMU，LIDAR，CAMERA，雷达和声呐组成。 </p>
+<p>GPS可以全球定位，但是10HZ的评率让其不能提供实时的位置更新，而且IMU准确度随着时间降低，因此长时间并不能保证位置更新的准确性，但是有GPS的实时性，可以&gt;200HZ。通过融合GPS和IMU就可以提供准确且实时的位置更新。</p>
+<p>激光雷达可以用来绘制地图，定位，避障，准确率非常高。激光雷达就是以激光作为光源，通过探测激光与探测物体相互之间的光波信号来完成遥感测量。但是如果是为了避障并不能满足感知能力，因为所有的东西都是障碍物的话，如何预测之后物体的路径的？人在驾车过程中，不是一般也要预测这个车之后会在哪儿么，如果单纯的只是避障，并不能对不同的物体预测不同的速度来行动，但是如果是激光点云的话，应该有一些几何方法来扣出一个物体的点云，需要之后查看一下传统论文。目前基本上是2017年开始的PointNet之后，开始用深度学习进行3D检测了，目前其实算力还是一定的限制并不能达到体素程度的卷积，但未来很有希望达到2D领域的检测精度，未来可期。</p>
+<p>由于激光雷达方面对颜色的弱性，所以检测有颜色的物体或者体积很小的物体的时候，摄像头就很重要了，常见就是车道线，交通灯，人行道之类的。一般至少要配备八个摄像头，前后左右。</p>
+<p>雷达就是静距离的避障最后一道保障，可以用来表示车前进方向上最近的障碍物的距离来在紧急情况下完成避障，声呐和雷达系统产生的数据不需要过多的处理，可以直接被控制处理器采用，并不需要主计算流水线的介入，因此可以实现转向，刹车等紧急功能。</p>
+<p>定位：<br>camera图像也可以用于定位(需要自我推导)<br>如果视差图可以用于推导距离，那么从2D用内外参数矩阵转3D然后计算间隔应该也可以。这样就不需要双目摄像头了。但是精度应该不高，如果有深度摄像头也可以直接用来计算。<br>本文中的方法：<br>A.通过对立体图像的三角部分，首先获得视差图用以计算每个点的深度信息；<br>B.通过匹配连续立体图像帧之间的显著特征<br>C.通过比较捕捉到的显著特诊和已知地图上的点计算车辆与当前位置。<br>但是我觉得这个方法在扯淡，因为来一个强光，全就没用了，至少目前来说。</p>
+<p>所以！！！传统的激光雷达方法来作为主传感器，对点云环境惊醒”形状性描述“，并不足以区分不同的点，通过粒子滤波，系统可以将已知地图和观测到的具体形状进行比较以减少位置的不确定性。误差大概在10cm内的实时定位，在复杂城市环境内尤为有效。然而，激光雷达有其固有的缺点，如果空气中有悬浮的颗粒（比如雨滴或者灰尘），测量结果就会有极大的扰动，所以我们需要利用多种传感器融合的技术进行多类型传感器数据融合，处理以整合所有传感器的有点，完成可靠的定位。</p>
+<p>物体识别与跟踪<br>识别，嗯，这里说的我知道。<br>跟踪这里用于追踪临近车辆或行人，保证过程中不会与其他物体发生碰撞。</p>
+<p>决策<br>在决策阶段，行为预测，路径规划以及避障机制三者结合起来实时的完成无人驾驶动作规划。</p>
+<p>行为预测就是考验司机如何应对其他行驶车辆的可能行为，这种预判断直接影响了司机本人的架势决策，特别是在多车道环境或交通灯变灯的情况下，司机的预测决定下一秒的行车安全。所以，过度到无人车架势系统中，决策模块如何根据周围车辆的形式状况决策下一秒的行驶行为就显得至关重要。可以使用随机模型产生这些车辆的可达位置的集合，并用概率分布方法预测每一个可达位置集的相关概率。</p>
+<p>路径规划<br>原本是搜索完全可能的路径并利用代价函数的方式确定最佳路径。然后，完全确定模型对计算性能有很高的算力要求，所以概率模型会变成主要的优化方向。</p>
+<p>避障<br>安全性因为过于重要，至少要两层级的避障机制来确保车辆不会再行驶过程中发生碰撞。第一层级是基于交通情况预测的前瞻等级，估计碰撞发生时间与最短距离等参数。基于这些数据估计，避障机制将被启用以执行本地路径重规划。如果前瞻层级预测失效，则第二级实时反映层将使用的雷达数据再次进行本地路径重规划。一旦雷达侦测到路径前方出现障碍我，则立即执行避障操作。</p>
+<p>用户端系统有三个要求<br>A.捕捉大量传感器数据可以快速得到处理<br>B.如果系统某部分失效，则系统需要足够的健壮性能从错误中回复<br>C.系统必须在设计的能耗和资源限定下完成所有的计算操作。</p>
+<p>机器人操作系统ROS有很大潜力，baidu的apollo系统就是基于ros开发的。但是还有有一些问题：<br>可靠性：比如单节点控制，并没有监控机制可以恢复失效的节点<br>性能：当节点之间使用广播消息的方式进行通信时，将产生多次信息复制导致性能下降。<br>安全：ROS中没有授权加密机制，因此安全性收到很大的威胁。</p>
+<p>尽管ROS2.0承诺将解决上述问题，但是现有版本的ROS并没有解决方案。</p>
+<p>对于可靠性，我们需要开启ZooKeeper方案，健康了那个并自动重启失效节点，以确保整个ROS系统在任何时刻都是双备份模式。</p>
+<p>对于性能：因为ROS节点之间交互非常频繁，所以设计高效的通信机制对确保ROS的性能很重要。首先本地节点和其他节点通信时都要走完整个TCP/IP全栈协议、有20微秒的延迟。取消TCP/IP同行模式，用共享内存的方式完成节点通信，ROS在广播消息时，消息被多次复制与传输，消耗了大量的系统带宽。如果改成目的地更明确地多路经传输机制则将极大改善系统的带宽和吞吐量</p>
+<p>对于安全，如果一个ROS节点被挟制后，就会不停地进行内存分配，整个系统最终将因内存耗尽而导致剩余节点失效而全线崩溃，本身没有加密机制，黑客很容易在节点之间窃听消息并完成系统的入侵。为了解决问题，使用Linux containers，LXC的方法限制每个节点可供使用的资源数，并用沙盒的方式确保每个节点的运行独立。这样可以最大限度的防止资源泄露。对通信消息进行加密和解密，防止窃听。</p>
+<p>云平台<br>云平台主要是移动系统，因此需要云平台的分布式计算和分布式储存。</p>
+<p>仿真<br>通过仿真降低真车的测试成本很重要，可以让迭代周期变得小很多。如果没有仿真，每个小模拟测试都会消费数个小时去真实场景。<br>在云平台中，spark管理着分布式的多个计算节点，在每一个计算节点中，都可以部署一个场景下的ROS回访模拟。在无人驾驶物体识别测试中，单服务器需消耗3小时完成算法测试，如果使用8机spark肌群，则时间可以缩短至25分钟。</p>
+<p>高精度地图生成。<br>高精度地图的产生过程十分复杂，设计原始数据的处理，点云生成，点云对齐，2D反射地图生成，高精度地图标注，地图生成等阶段。使用spark可以将所有这些阶段整合成一个spark作业。由于spark有天然的内存计算的特征，在作业运行过程中产生的中间数据都储存在内存中。当整个地图产生作业提交以后，不同阶段之间产生的大量数据不需要使用磁盘存储，从而极大提高高精度地图产生的性能。</p>
+<p>展望！！！！！<br>通过这一下午系统的学习，原本我就知道无人驾驶就不是一个单一技术，但是没想到有那么多潜在的需求点和具体整合系统方法。现在的序幕才刚刚开启，其中有着千千万万的机会有待发掘，目前自动驾驶产业化在多个方面都取得了很大进步，其中合作共享已成为共识，产业链不断整合，业界企业相继展开合作，传感器价格将不断下降，算力成本也在不断下降，未来可期。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/01/AD-1/" data-id="ck63duxmg0000sw6lc2scbruf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E3%80%8A%E7%AC%AC%E4%B8%80%E6%9C%AC%E6%97%A0%E4%BA%BA%E9%A9%BE%E9%A9%B6%E6%8A%80%E6%9C%AF%E4%B9%A6%E3%80%8B/" rel="tag">《第一本无人驾驶技术书》</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/01/31/leetcode128/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">leetcode128</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/leetcode/">leetcode</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/Autopilot/">Autopilot</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E3%80%8A%E7%AC%AC%E4%B8%80%E6%9C%AC%E6%97%A0%E4%BA%BA%E9%A9%BE%E9%A9%B6%E6%8A%80%E6%9C%AF%E4%B9%A6%E3%80%8B/" rel="tag">《第一本无人驾驶技术书》</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a> <a href="/tags/%E3%80%8A%E7%AC%AC%E4%B8%80%E6%9C%AC%E6%97%A0%E4%BA%BA%E9%A9%BE%E9%A9%B6%E6%8A%80%E6%9C%AF%E4%B9%A6%E3%80%8B/" style="font-size: 10px;">《第一本无人驾驶技术书》</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/01/AD-1/">《第一本无人驾驶技术书》</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/31/leetcode128/">leetcode128</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/31/MyFirstDiary/">Leetcode388</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/31/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Alex Yin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
